@@ -14,6 +14,8 @@ namespace ProjectList.Models
         }
 
         public DbSet<Products> Products { get; set; }
+      
+
     }
 }
 

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ProjectList.Models;
+using ProjectList.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,9 +33,12 @@ namespace ProjectList
             services.AddControllers();
             services.AddDbContext<ProductContext>(opt =>
                                                   opt.UseInMemoryDatabase("ProjectList"));
+            services.AddDbContext<OrdersContext>(opt =>
+                                                  opt.UseInMemoryDatabase("ProjectList"));
+
             //services.AddSwaggerGen(c =>
             //{
-             //   c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectList", Version = "v1" });
+            //   c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectList", Version = "v1" });
             //});
         }
 
