@@ -7,8 +7,8 @@ namespace ProjectList.Models
 {
     public class Products
     {
+        public long Id { get; set; }
         public long ProductCode { get; set; }
-
         public int Quantity { get; set; }
     }
 }
